@@ -1,0 +1,113 @@
+RewriteEngine on
+
+# osnova
+RewriteRule ^contact$                                           "/index.php?page=contact"
+RewriteRule ^order/(.*)$                    "/index.php?page=order&id=$1"
+RewriteRule ^admin$                                                 "/index.php?page=admin"
+
+RewriteRule ^admin/billing/(.*)$                                                    "/index.php?page=admin&p=billing&id=$1"
+RewriteRule ^admin/billing$                                                 "/index.php?page=admin&p=billing"
+RewriteRule ^admin/narudzbe$                                                "/index.php?page=admin&p=narudzbe"
+RewriteRule ^admin/blockip$                                                 "/index.php?page=admin&p=blockip"
+
+RewriteRule ^admin/modovi(.*)$                                              "/index.php?page=admin&p=modovi$1"
+RewriteRule ^admin/modovi$                                                  "/index.php?page=admin&p=modovi"
+
+RewriteRule ^admin/plugini(.*)$                                             "/index.php?page=admin&p=plugini$1"
+RewriteRule ^admin/plugini$                                                 "/index.php?page=admin&p=plugini"
+
+RewriteRule ^admin/igre(.*)$                                                "/index.php?page=admin&p=igre$1"
+RewriteRule ^admin/igre$                                                    "/index.php?page=admin&p=igre"
+
+RewriteRule ^admin/box(.*)$                                                 "/index.php?page=admin&p=box$1"
+RewriteRule ^admin/box$                                             "/index.php?page=admin&p=box"
+
+RewriteRule ^admin/server_review/(.*)$      "/index.php?page=server_review&id=$1"
+RewriteRule ^server_orders$                                 "/index.php?page=server_orders"
+RewriteRule ^review/(.*)$                   "/index.php?page=review&id=$1"
+RewriteRule ^referal$                                   "/index.php?page=referal"
+RewriteRule ^referal/give_point/(.*)$       "/index.php?page=give_point&userid=$1"
+RewriteRule ^servers$                                           "/index.php?page=servers"
+RewriteRule ^server_info/(.*)$                          "/index.php?page=server_info&ip=$1"
+RewriteRule ^chart/(.*)$                    "/server_chart.php?ip=$1"
+RewriteRule ^server_banner/(.*)$            "/banner.php?ip=$1"
+RewriteRule ^server_banner_red/(.*)$        "/banner_red.php?ip=$1"
+RewriteRule ^server_banner_blue/(.*)$       "/banner_blue.php?ip=$1"
+RewriteRule ^server_banner_orange/(.*)$     "/banner_orange.php?ip=$1"
+RewriteRule ^server_banner_purple/(.*)$     "/banner_purple.php?ip=$1"
+RewriteRule ^servers/&stranica=(.*)$            "/index.php?page=servers&stranica=$1"
+RewriteRule ^admin/servers$                 "/index.php?page=admin&p=admin_servers"
+RewriteRule ^admin/kupon$                 "/index.php?page=admin&p=admin_kupons"
+RewriteRule ^admin/tickets$                 "/index.php?page=admin&p=admin_tickets"
+RewriteRule ^tickets$                 "/index.php?page=tickets"
+RewriteRule ^ticket/(.*)$                 "/index.php?page=ticket&id=$1"
+RewriteRule ^activate/(.*)$                 "/index.php?page=activate&id=$1"
+RewriteRule ^user/edit$                 "/index.php?page=useredit"
+RewriteRule ^user/(.*)$                 "/index.php?page=user&username=$1"
+RewriteRule ^uplatnica/(.*)$                 "/index.php?page=user&username=$1"
+RewriteRule ^admin/servers/&stranica=(.*)$      "/index.php?page=admin&p=admin_servers&stranica=$1"
+RewriteRule ^admin/server_edit/(.*)$        "/index.php?page=admin&p=edit_server&id=$1"
+RewriteRule ^community$                                         "/index.php?page=community"
+RewriteRule ^community_info/(.*)$           "/index.php?page=community_info&id=$1"
+RewriteRule ^community_chart/(.*)$          "/community_chart.php?id=$1"
+RewriteRule ^communities$                                       "/index.php?page=communities"
+RewriteRule ^register$                                  "/index.php?page=register"
+RewriteRule ^forgot$                                    "/index.php?page=forgot"
+RewriteRule ^top$                                       "/index.php?page=top"
+RewriteRule ^notifications$                                     "/index.php?page=notifications"
+RewriteRule ^communities/&stranica=(.*)$        "/index.php?page=communities&stranica=$1"
+RewriteRule ^admin/communities$             "/index.php?page=admin&p=admin_communities"
+RewriteRule ^slip-generator/(.*)/(.*)/(.*)$             "/slip.generator.php?country=$1&type=$2&id=$3"
+
+
+# GAME PANEL
+RewriteRule ^gp/serveri$                               "/index.php?page=gamepanel&pa=serveri"
+
+
+RewriteRule ^gp/billing/plati$                               "/index.php?page=gamepanel&pa=billing&s=plati"
+RewriteRule ^gp/billing/pregledaj/(.*)/(.*)$                               "/index.php?page=gamepanel&pa=billing&s=pregledaj&id=$1&action=$2"
+RewriteRule ^gp/billing/pregledaj/(.*)$                               "/index.php?page=gamepanel&pa=billing&s=pregledaj&id=$1"
+RewriteRule ^gp/billing/add/(.*)$                               "/index.php?page=gamepanel&pa=billing&s=add&type=$1"
+RewriteRule ^gp/billing$                               "/index.php?page=gamepanel&pa=billing&s=main"
+
+RewriteRule ^gp/pocetna$                               "/index.php?page=gamepanel&pa=home"
+RewriteRule ^gp/server/(.*)/plugini$                               "/index.php?page=gamepanel&pa=server&id=$1&content=plugins"
+RewriteRule ^gp/server/(.*)/modovi$                               "/index.php?page=gamepanel&pa=server&id=$1&content=modovi"
+RewriteRule ^gp/server/(.*)/webftp/edit/(.*)$                               "/index.php?page=gamepanel&pa=server&id=$1&content=webftp&edit=$2"
+RewriteRule ^gp/server/(.*)/webftp/(.*)$                               "/index.php?page=gamepanel&pa=server&id=$1&content=webftp$2"
+RewriteRule ^gp/server/(.*)/monitor$                               "/index.php?page=gamepanel&pa=server&id=$1&content=monitor"
+RewriteRule ^gp/server/(.*)/webftp$                               "/index.php?page=gamepanel&pa=server&id=$1&content=webftp"
+RewriteRule ^gp/server/(.*)$                               "/index.php?page=gamepanel&pa=server&id=$1&content=main"
+
+RewriteRule ^gp/podrska$                               "/index.php?page=gamepanel&pa=podrska"
+
+
+RewriteRule ^img/$                                   "/index.php"
+RewriteRule ^css/$                                   "/index.php"
+RewriteRule ^banners/$                               "/index.php"
+
+
+#image folder
+
+RewriteRule ^img/$                          "/error.php"
+
+#ostalo
+
+RewriteRule ^css/$                                      "/error.php"
+RewriteRule ^js/$                                       "/error.php"
+RewriteRule ^SQL/$                                      "/error.php"
+RewriteRule ^fonts/$                            "/error.php"
+
+RewriteRule ^plugin_amxx/$                      "/error.php"
+
+RewriteRule ^connect_db.php$                "/error.php"
+
+#ERROR PAGES
+
+ErrorDocument 404 /error.php
+
+
+<Files 403.shtml>
+        order allow,deny
+        allow from all
+</Files>

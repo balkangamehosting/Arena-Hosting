@@ -1,0 +1,6 @@
+Format
+[igra] * [username_cms] * [slotovi] * [ip] * [port] * [ime_servera] * [ftp_username] * [ftp_password]
+
+Primjer:
+
+cs * DemoN * 32 * 192.168.1.1 * 27015 * Public server no.1 * srv_102 * 12or1n2t21t
